@@ -3,7 +3,11 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+<<<<<<< HEAD
 import { mainBody, repos, about, skills } from "../editable-stuff/config.js";
+=======
+import { mainBody, about, skills } from "../editable-stuff/config.js";
+>>>>>>> d04f68f (Initial commit)
 import { NavLink } from "./home/migration";
 
 const Navigation = React.forwardRef((props, ref) => {
@@ -13,6 +17,17 @@ const Navigation = React.forwardRef((props, ref) => {
   const navbarMenuRef = React.useRef();
   const navbarDimensions = useResizeObserver(navbarMenuRef);
   const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
+<<<<<<< HEAD
+=======
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+>>>>>>> d04f68f (Initial commit)
   useScrollPosition(
     ({ prevPos, currPos }) => {
       if (!navbarDimensions) return;
@@ -38,7 +53,11 @@ const Navigation = React.forwardRef((props, ref) => {
         }`}
       expand="lg"
     >
+<<<<<<< HEAD
       <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
+=======
+      <Navbar.Brand className="navbar-brand" onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
+>>>>>>> d04f68f (Initial commit)
         {`<${mainBody.firstName} />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
@@ -49,12 +68,55 @@ const Navigation = React.forwardRef((props, ref) => {
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </NavLink>
           } */}
+<<<<<<< HEAD
           {repos.show && (
 
             <NavLink
               href={process.env.PUBLIC_URL + "/#projects"}
             >
               Projects
+=======
+          {about.show && (
+            <NavLink
+              className="nav-item lead"
+              href="#aboutme"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('aboutme');
+              }}
+            >
+              About
+            </NavLink>
+          )}
+          <NavLink
+            href="#experiences"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('experiences');
+            }}
+          >
+            Experiences
+          </NavLink>
+          <NavLink
+            href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('projects');
+            }}
+          >
+            Projects
+          </NavLink>
+          {skills.show && (
+            <NavLink
+              className="nav-item lead"
+              href="#skills"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('skills');
+              }}
+            >
+              Skills
+>>>>>>> d04f68f (Initial commit)
             </NavLink>
           )}
           <NavLink
@@ -65,6 +127,7 @@ const Navigation = React.forwardRef((props, ref) => {
           >
             Resume
           </NavLink>
+<<<<<<< HEAD
           {about.show && (
             <NavLink
               className="nav-item lead"
@@ -81,6 +144,8 @@ const Navigation = React.forwardRef((props, ref) => {
               Skills
             </NavLink>
           )}
+=======
+>>>>>>> d04f68f (Initial commit)
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import SkillsTab from "./SkillsTab";
@@ -50,6 +51,23 @@ const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
             </Row>
           </Tab>
         </Tabs>
+=======
+import { Jumbotron } from "./migration";
+import { Container } from "react-bootstrap";
+import SkillsCarousel from "./SkillsCarousel";
+
+const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
+  return (
+    <Jumbotron fluid className="bg-white m-0" id="skills">
+      <Container className="p-5 ">
+        <h2 ref={ref} className="display-4 pb-5 text-center">
+          {heading}
+        </h2>
+        <div className="skills-carousel-group">
+          <SkillsCarousel skills={hardSkills} />
+          <SkillsCarousel skills={softSkills} />
+        </div>
+>>>>>>> d04f68f (Initial commit)
       </Container>
     </Jumbotron>
   );

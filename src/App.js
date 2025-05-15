@@ -4,7 +4,12 @@ import {
   navBar,
   mainBody,
   about,
+<<<<<<< HEAD
   repos,
+=======
+  personalProjects,
+  schoolProjects,
+>>>>>>> d04f68f (Initial commit)
   leadership,
   skills,
   getInTouch,
@@ -42,6 +47,7 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
+<<<<<<< HEAD
       {
         experiences.show && (
           <Experience experiences={experiences}/>
@@ -53,6 +59,14 @@ const Home = React.forwardRef((props, ref) => {
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
+=======
+      {experiences.show && <Experience experiences={experiences} />}
+      {/* Render Personal and School Projects */}
+      {(personalProjects.show || schoolProjects.show) && (
+        <Project
+          personalProjects={personalProjects}
+          schoolProjects={schoolProjects}
+>>>>>>> d04f68f (Initial commit)
         />
       )}
       {leadership.show && (
@@ -70,7 +84,10 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
+<<<<<<< HEAD
       
+=======
+>>>>>>> d04f68f (Initial commit)
     </>
   );
 });
@@ -79,7 +96,11 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
+<<<<<<< HEAD
     <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+=======
+    <BrowserRouter>
+>>>>>>> d04f68f (Initial commit)
       {navBar.show && <Navbar ref={titleRef} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} />} />

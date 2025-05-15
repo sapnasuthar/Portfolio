@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+=======
+import React, { useState, useEffect } from "react";
+import { Col, Card, Button } from "react-bootstrap";
+>>>>>>> d04f68f (Initial commit)
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
@@ -12,6 +17,7 @@ const ProjectCard = ({ value }) => {
     stargazers_count,
     languages_url,
     pushed_at,
+<<<<<<< HEAD
   } = value;
   return (
     <Col md={6}>
@@ -31,12 +37,62 @@ const ProjectCard = ({ value }) => {
           ) : (
             <Skeleton />
           )}
+=======
+    subtitle,
+  } = value;
+
+  return (
+    <Col md={6} className="d-flex align-items-stretch">
+      <Card className="card shadow-lg p-3 mb-5 bg-white rounded w-100">
+        <Card.Body className="d-flex flex-column">
+          {/* Repo Name */}
+          <Card.Title as="h5">{name || <Skeleton />}</Card.Title>
+
+          {/* Optional Subtitle */}
+          {subtitle && (
+            <Card.Subtitle className="mb-2 text-muted">
+              {subtitle}
+            </Card.Subtitle>
+          )}
+
+          {/* Description */}
+          <Card.Text className="flex-grow-1">
+            {description ? description : <Skeleton count={3} />}
+          </Card.Text>
+
+          {/* Action Buttons */}
+          <div className="mt-auto text-center">
+            {svn_url && (
+              <Button
+                variant="outline-dark"
+                href={svn_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                <i className="fab fa-github"></i> Repo
+              </Button>
+            )}
+            {value.link && (
+              <Button
+                variant="outline-dark"
+                href={value.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2"
+              >
+                {value.extraDesc ? value.extraDesc : "Learn More"}
+              </Button>
+            )}
+          </div>
+>>>>>>> d04f68f (Initial commit)
         </Card.Body>
       </Card>
     </Col>
   );
 };
 
+<<<<<<< HEAD
 const CardButtons = ({ svn_url }) => {
   return (
     <div className="d-grid gap-2 d-md-block">
@@ -141,4 +197,6 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   );
 };
 
+=======
+>>>>>>> d04f68f (Initial commit)
 export default ProjectCard;

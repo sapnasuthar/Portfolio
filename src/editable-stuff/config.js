@@ -6,6 +6,7 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
+<<<<<<< HEAD
   firstName: "Hashir",
   middleName: "",
   lastName: "Shoaib",
@@ -30,6 +31,20 @@ const mainBody = {
     {
       image: "fa-twitter",
       url: "https://www.twitter.com/hashirshoaeb/",
+=======
+  firstName: "Sapna",
+  middleName: "",
+  lastName: "Suthar",
+  message: "Wired for innovation, grounded in precision.",
+  icons: [
+    {
+      image: "fa-github",
+      url: "https://github.com/sapnasuthar",
+    },
+    {
+      image: "fa-linkedin",
+      url: "https://www.linkedin.com/in/sapnasuthar",
+>>>>>>> d04f68f (Initial commit)
     },
   ],
 };
@@ -51,11 +66,19 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
+<<<<<<< HEAD
   imageLink: require("../editable-stuff/hashirshoaeb.png"),
   imageSize: 375,
   message:
     "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
   resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+=======
+  imageLink: require("../editable-stuff/sapnasuthar-2.png"),
+  imageSize: 375,
+  message:
+    "I'm Sapna Suthar. I'm a third-year Electrical Engineering student at McMaster University. I love building circuits, designing PCBs and working with embedded systems. I take pride in turning ideas into real products, whether it's a control board for an electric vehicle or a custom FPGA design. I balance hands-on detail work with big-picture system planning. I thrive in team settings and enjoy solving practical problems with creative, effective solutions.",
+  resume: require('../assets/img/SapnaSutharResume.pdf'),
+>>>>>>> d04f68f (Initial commit)
 };
 
 // PROJECTS SECTION
@@ -63,12 +86,84 @@ const about = {
 //      i.e: reposLength: 0,
 // If you want to display specfic projects, add the repository names,
 //      i.e ["repository-1", "repo-2"]
+<<<<<<< HEAD
 const repos = {
   show: true,
   heading: "Recent Projects",
   gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
   reposLength: 4,
   specificRepos: [],
+=======
+const schoolProjects = {
+  show: true,
+  heading: "School Projects",
+  data: [
+    {
+      title: 'LIDAR Mapping',
+      subtitle: 'Portable Indoor 3D Mapping System',
+      img: require('../assets/img/projects/LIDAR_Photo.png'),
+      link: require('../assets/img/projects/2DX3Report.pdf'),
+      repo: "https://github.com/sapnasuthar/LIDAR-Mapping",
+      description: "Built a portable system that scans indoor spaces in 3D and renders the point‐cloud data in MATLAB.",
+    },
+    {
+      title: 'DC Power Supply',
+      subtitle: 'ELECENG 2EI4 Course Project',
+      img: require('../assets/img/projects/Project1.png'),
+      link: require('../assets/img/projects/Project1.pdf'),
+      repo: "https://github.com/sapnasuthar/ELECENG-2EI4/",
+      description: "Developed a regulated DC power supply that delivers a steady output voltage under varying load conditions.",
+    },
+    {
+      title: 'Voltage Controlled Switch',
+      subtitle: 'ELECENG 2EI4 Course Project',
+      img: require('../assets/img/projects/Project2.png'),
+      link: require('../assets/img/projects/Project2.pdf'),
+      repo: "https://github.com/sapnasuthar/ELECENG-2EI4/",
+      description: "Created a switch whose output state toggles reliably in response to an analog control voltage.",
+    },
+    {
+      title: 'Amplifier',
+      subtitle: 'ELECENG 2EI4 Course Project',
+      img: require('../assets/img/projects/Project3.png'),
+      link: require('../assets/img/projects/Project3.pdf'),
+      repo: "https://github.com/sapnasuthar/ELECENG-2EI4/",
+      description: "Built a transistor amplifier achieving clean signal gain for small input voltages into a 100Ω load.",
+    },
+    {
+      title: 'CMOS XOR Gate',
+      subtitle: 'ELECENG 2EI4 Course Project',
+      img: require('../assets/img/projects/Project4.png'),
+      link: require('../assets/img/projects/Project4.pdf'),
+      repo: "https://github.com/sapnasuthar/ELECENG-2EI4/",
+      description: "Assembled a CMOS logic gate that accurately implements its truth table across all input combinations.",
+    },
+  ]
+};
+
+const personalProjects = {
+  show: true,
+  heading: "Personal Projects",
+  data: [
+    {
+      title: 'RxID',
+      subtitle: '1st Place at MakeUofT',
+      img: require('../assets/img/projects/RxID.png'),
+      link: "https://devpost.com/software/rxid",
+      repo: "https://github.com/shaansuthar/rxid",
+      description: "Delivered a patient-centric medication management platform that securely stores records and automates dispensing via RFID-enabled hardware.",
+    },
+    {
+      title: 'QonnectR',
+      subtitle: 'Best Use of Auth0 at DeltaHacks XI',
+      img: require('../assets/img/projects/QonnectRLogo.png'),
+      extraDesc: 'Watch me',
+      link: "https://qonnectr.vercel.app",
+      repo: "https://github.com/devp19/QonnectR",
+      description: "Created a community-driven platform that connects individuals around project ideas, turning solo concepts into collaborative, accountable team efforts.",
+    },
+  ]
+>>>>>>> d04f68f (Initial commit)
 };
 
 // Leadership SECTION
@@ -100,6 +195,7 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
+<<<<<<< HEAD
     { name: "Python", value: 90 },
     { name: "SQL", value: 75 },
     { name: "Data Structures", value: 85 },
@@ -118,6 +214,24 @@ const skills = {
     { name: "Empathy", value: 90 },
     { name: "Organization", value: 70 },
     { name: "Creativity", value: 90 },
+=======
+    { name: "C/C++", img: require("../assets/img/skills/C.png") },
+    { name: "Python", img: require("../assets/img/skills/Python.png") },
+    { name: "Verilog", img: require("../assets/img/skills/Verilog.png") },
+    { name: "SystemVerilog++", img: require("../assets/img/skills/SystemVerilog.png") },
+    { name: "VHDL", img: require("../assets/img/skills/VHDL.png") },
+    { name: "Java", img: require("../assets/img/skills/Java.png") },
+    { name: "Git", img: require("../assets/img/skills/Git.webp") },
+    { name: "Bash", img: require("../assets/img/skills/Bash.svg.png") },
+  ],
+  softSkills: [
+    { name: "MATLAB", img: require("../assets/img/skills/MATLAB.png") },
+    { name: "Quartus", img: require("../assets/img/skills/Quartus.png") },
+    { name: "Altium Designer", img: require("../assets/img/skills/Altium.png") },
+    { name: "Keil uVision", img: require("../assets/img/skills/Keil.jpeg") },
+    { name: "LTSpice", img: require("../assets/img/skills/LTSpice.png") },
+    { name: "VSCode", img: require("../assets/img/skills/VSCode.svg.png") },
+>>>>>>> d04f68f (Initial commit)
   ],
 };
 
@@ -126,6 +240,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
+<<<<<<< HEAD
     "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
   email: "hashirshoaeb@gmail.com",
 };
@@ -146,10 +261,67 @@ const experiences = {
     },
   ]
 }
+=======
+    "I'm currently seeking internships in ASIC design, verification, and embedded systems. If you know of any opportunities, have questions, or just want to say hi, please feel free to reach out!"
+};
+
+const experiences = {
+  show: true,
+  id: 'experience',
+  heading: 'Experiences',
+  data: [
+    {
+      picture: require('../assets/img/experiences/GWC.svg.png'),
+      title: 'Co-President',
+      company: 'GirlsWhoCode',
+      dates: 'September 2022 – June 2023',
+      description: 'Co-led the McMaster Girls Who Code Club, organizing workshops and a hackathon that engaged 30+ members, boosted coding confidence and inspired others to pursue STEM paths',
+      link: require('../assets/img/experiences/GWC Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/WIE.png'),
+      title: 'Ambassador',
+      company: 'Women in Engineering',
+      dates: 'September 2023 – December 2023',
+      description: 'Visited high schools to showcase the Women in Engineering program, outline engineering career pathways, and share my personal journey to inspire future students.',
+      link: require('../assets/img/experiences/WIE Certificate.png'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/Scotia.png'),
+      title: 'Unlock Your Future - Women in Technology Program Fellow',
+      company: 'Scotiabank',
+      dates: 'January 2024 – April 2024',
+      description: 'Completed Scotiabank\'s Unlock Your Future program, gaining mentorship and career clarity',
+      link: require('../assets/img/experiences/Scotiabank Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/DayTrading.jpg'),
+      title: 'Day Trader',
+      company: 'Self-Employed',
+      dates: 'July 2024 – August 2024',
+      description: 'Grew $100K to $150K in a month of paper trading using momentum setups',
+      link: require('../assets/img/experiences/Trading Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/FE.png'),
+      title: 'Front Controller PCB Designer',
+      company: 'McMaster Formula SAE Team',
+      dates: 'September 2023 – Present',
+      description: 'Designed and built the front controller PCB for an electric race car.',
+      link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
+    },
+    // Add more experiences here in the same format
+  ]
+};
+>>>>>>> d04f68f (Initial commit)
 
 // Blog SECTION
 // const blog = {
 //   show: false,
 // };
 
+<<<<<<< HEAD
 export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+=======
+export { navBar, mainBody, about, schoolProjects, personalProjects, skills, leadership, getInTouch, experiences };
+>>>>>>> d04f68f (Initial commit)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from "react";
 import Container from "react-bootstrap/Container";
 import { Jumbotron } from "./migration";
@@ -74,6 +75,40 @@ const Project = ({ heading, username, length, specfic }) => {
                 value={project}
               />
             ))}
+=======
+import React from "react";
+import Container from "react-bootstrap/Container";
+import { Jumbotron } from "./migration";
+import Row from "react-bootstrap/Row";
+import PersonalProjectCard from "./PersonalProjectCard";
+
+const Project = ({ personalProjects, schoolProjects }) => {
+  return (
+    <Jumbotron fluid id="projects" className="bg-light m-0">
+      <Container>
+        {/* Personal Projects First */}
+        <h2 className="display-4 pb-5 text-center">Projects</h2>
+        <h3 className="display-6 pb-3 text-center">{personalProjects.heading}</h3>
+        <Row className="justify-content-center">
+          {personalProjects.data.length > 0 ? (
+            personalProjects.data.map((project, index) => (
+              <PersonalProjectCard key={index} data={project} />
+            ))
+          ) : (
+            <div className="text-center w-100 pb-4">No personal projects yet.</div>
+          )}
+        </Row>
+        {/* School Projects Second */}
+        <h3 className="display-6 pb-3 text-center">{schoolProjects.heading}</h3>
+        <Row className="justify-content-center">
+          {schoolProjects.data.length > 0 ? (
+            schoolProjects.data.map((project, index) => (
+              <PersonalProjectCard key={index} data={project} />
+            ))
+          ) : (
+            <div className="text-center w-100 pb-4">No school projects yet.</div>
+          )}
+>>>>>>> d04f68f (Initial commit)
         </Row>
       </Container>
     </Jumbotron>
