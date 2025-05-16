@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const GetInTouch = ({ heading, message, email }) => {
-=======
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -60,15 +55,10 @@ const GetInTouch = ({ heading, message, email }) => {
       .finally(() => setLoading(false));
   };
 
->>>>>>> d04f68f (Initial commit)
   return (
     <>
       <h2 className="display-4 pb-3 text-center">{heading}</h2>
       <p className="lead text-center pb-3">
-<<<<<<< HEAD
-        {message}, <a className="text-decoration-none" href={`mailto:${email}`}>{email}</a>.
-      </p>
-=======
         {message}{" "}
         <a className="text-decoration-none" href={`mailto:${email}`}>
           {email}
@@ -120,7 +110,6 @@ const GetInTouch = ({ heading, message, email }) => {
         <div style={{ height: '32px' }}></div>
         {status && <div className={`text-center ${status.includes('success') ? 'text-success' : 'text-danger'}`}>{status}</div>}
       </form>
->>>>>>> d04f68f (Initial commit)
     </>
   );
 };

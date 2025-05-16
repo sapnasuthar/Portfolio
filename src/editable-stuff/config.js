@@ -6,32 +6,6 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-<<<<<<< HEAD
-  firstName: "Hashir",
-  middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
-  icons: [
-    {
-      image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
-    },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
-    {
-      image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
-=======
   firstName: "Sapna",
   middleName: "",
   lastName: "Suthar",
@@ -44,7 +18,6 @@ const mainBody = {
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/sapnasuthar",
->>>>>>> d04f68f (Initial commit)
     },
   ],
 };
@@ -66,19 +39,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-<<<<<<< HEAD
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
-  imageSize: 375,
-  message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
-=======
   imageLink: require("../editable-stuff/sapnasuthar-2.png"),
   imageSize: 375,
   message:
     "I'm Sapna Suthar. I'm a third-year Electrical Engineering student at McMaster University. I love building circuits, designing PCBs and working with embedded systems. I take pride in turning ideas into real products, whether it's a control board for an electric vehicle or a custom FPGA design. I balance hands-on detail work with big-picture system planning. I thrive in team settings and enjoy solving practical problems with creative, effective solutions.",
   resume: require('../assets/img/SapnaSutharResume.pdf'),
->>>>>>> d04f68f (Initial commit)
 };
 
 // PROJECTS SECTION
@@ -86,14 +51,14 @@ const about = {
 //      i.e: reposLength: 0,
 // If you want to display specfic projects, add the repository names,
 //      i.e ["repository-1", "repo-2"]
-<<<<<<< HEAD
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
+  gitHubUsername: "sapnasuthar", 
   reposLength: 4,
   specificRepos: [],
-=======
+};
+
 const schoolProjects = {
   show: true,
   heading: "School Projects",
@@ -157,13 +122,12 @@ const personalProjects = {
       title: 'QonnectR',
       subtitle: 'Best Use of Auth0 at DeltaHacks XI',
       img: require('../assets/img/projects/QonnectRLogo.png'),
-      extraDesc: 'Watch me',
+      extraDesc: 'View Demo',
       link: "https://qonnectr.vercel.app",
       repo: "https://github.com/devp19/QonnectR",
       description: "Created a community-driven platform that connects individuals around project ideas, turning solo concepts into collaborative, accountable team efforts.",
     },
   ]
->>>>>>> d04f68f (Initial commit)
 };
 
 // Leadership SECTION
@@ -195,26 +159,6 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-<<<<<<< HEAD
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
-  ],
-  softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
-=======
     { name: "C/C++", img: require("../assets/img/skills/C.png") },
     { name: "Python", img: require("../assets/img/skills/Python.png") },
     { name: "Verilog", img: require("../assets/img/skills/Verilog.png") },
@@ -231,7 +175,6 @@ const skills = {
     { name: "Keil uVision", img: require("../assets/img/skills/Keil.jpeg") },
     { name: "LTSpice", img: require("../assets/img/skills/LTSpice.png") },
     { name: "VSCode", img: require("../assets/img/skills/VSCode.svg.png") },
->>>>>>> d04f68f (Initial commit)
   ],
 };
 
@@ -240,28 +183,6 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-<<<<<<< HEAD
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
-};
-
-const experiences = {
-  show: false,
-  heading: "Experiences",
-  data: [
-    {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
-    },
-    {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
-    },
-  ]
-}
-=======
     "I'm currently seeking internships in ASIC design, verification, and embedded systems. If you know of any opportunities, have questions, or just want to say hi, please feel free to reach out!"
 };
 
@@ -275,7 +196,7 @@ const experiences = {
       title: 'Co-President',
       company: 'GirlsWhoCode',
       dates: 'September 2022 – June 2023',
-      description: 'Co-led the McMaster Girls Who Code Club, organizing workshops and a hackathon that engaged 30+ members, boosted coding confidence and inspired others to pursue STEM paths',
+      description: 'Co-led the McMaster Girls Who Code Club, organizing workshops and a hackathon that engaged 30+ members, boosted coding confidence and inspired others to pursue STEM paths.',
       link: require('../assets/img/experiences/GWC Report.pdf'), // Add a link to more info if available
     },
     {
@@ -291,7 +212,7 @@ const experiences = {
       title: 'Unlock Your Future - Women in Technology Program Fellow',
       company: 'Scotiabank',
       dates: 'January 2024 – April 2024',
-      description: 'Completed Scotiabank\'s Unlock Your Future program, gaining mentorship and career clarity',
+      description: 'Completed Scotiabank\'s Unlock Your Future program, gaining mentorship and career clarity.',
       link: require('../assets/img/experiences/Scotiabank Report.pdf'), // Add a link to more info if available
     },
     {
@@ -299,7 +220,7 @@ const experiences = {
       title: 'Day Trader',
       company: 'Self-Employed',
       dates: 'July 2024 – August 2024',
-      description: 'Grew $100K to $150K in a month of paper trading using momentum setups',
+      description: 'Grew portfolio by 50% through disciplined day trading strategies.',
       link: require('../assets/img/experiences/Trading Report.pdf'), // Add a link to more info if available
     },
     {
@@ -313,15 +234,10 @@ const experiences = {
     // Add more experiences here in the same format
   ]
 };
->>>>>>> d04f68f (Initial commit)
 
 // Blog SECTION
 // const blog = {
 //   show: false,
 // };
 
-<<<<<<< HEAD
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
-=======
-export { navBar, mainBody, about, schoolProjects, personalProjects, skills, leadership, getInTouch, experiences };
->>>>>>> d04f68f (Initial commit)
+export { navBar, mainBody, about, repos, schoolProjects, personalProjects, skills, leadership, getInTouch, experiences };

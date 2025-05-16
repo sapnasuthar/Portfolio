@@ -15,16 +15,18 @@ const ExperienceCard = ({ data }) => {
         <div className="text-muted mb-1">{data.dates}</div>
         <div className="mb-2">{data.description}</div>
         {data.link && (
-          <Button
-            variant="outline-dark"
-            href={data.link}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="experience-btn"
-            aria-label="Learn More"
-          >
-            Learn More
-          </Button>
+          <div style={{ marginTop: '1rem' }}>
+            <Button
+              variant="outline-dark"
+              href={data.link}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="experience-btn"
+              aria-label="Learn More"
+            >
+              Learn More
+            </Button>
+          </div>
         )}
       </div>
     </Col>
