@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+console.log('EmailJS Public Key:', EMAILJS_PUBLIC_KEY); // Debug log
+
 const GetInTouch = ({ heading, message, email }) => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
@@ -9,8 +12,13 @@ const GetInTouch = ({ heading, message, email }) => {
 
   // Initialize EmailJS once when component mounts
   useEffect(() => {
+    console.log('Initializing EmailJS with key:', EMAILJS_PUBLIC_KEY); // Debug log
+    if (!EMAILJS_PUBLIC_KEY) {
+      console.error('EmailJS public key is missing!');
+      return;
+    }
     emailjs.init({
-      publicKey: "64lZgEKfi1zCB6zJM",
+      publicKey: EMAILJS_PUBLIC_KEY,
     });
   }, []);
 
@@ -36,12 +44,19 @@ const GetInTouch = ({ heading, message, email }) => {
     setLoading(true);
     setStatus('');
     
+    if (!EMAILJS_PUBLIC_KEY) {
+      console.error('EmailJS public key is missing during form submission!');
+      setStatus('Configuration error. Please contact the administrator.');
+      setLoading(false);
+      return;
+    }
+
     emailjs.sendForm(
       'service_wfmn97b',
       'template_isd76mm',
       formRef.current,
       {
-        publicKey: '64lZgEKfi1zCB6zJM',
+        publicKey: EMAILJS_PUBLIC_KEY,
       }
     )
       .then(() => {
