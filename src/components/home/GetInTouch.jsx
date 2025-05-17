@@ -22,10 +22,6 @@ const GetInTouch = ({ heading, message, email }) => {
     });
   }, []);
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
   // Update the state of the form inputs while maintaining the field names required by EmailJS
   const handleNameChange = (e) => {
     setForm({ ...form, name: e.target.value });
