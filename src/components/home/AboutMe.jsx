@@ -42,7 +42,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
               className="border border-secondary rounded-circle aboutme-icon img-fluid"
               src={profilePicUrl}
               alt="profilepicture"
-              style={{ maxWidth: 220, width: "100%", height: "auto" }}
+              style={{ maxWidth: '350px', width: '100%', height: 'auto' }}
             />
           )}
         </div>
