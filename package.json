@@ -17,7 +17,7 @@
     "react-loading-skeleton": "^3.1.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "react-typist-component": "^1.0.3",
     "sass": "^1.54.3",
     "web-vitals": "^2.1.4"
@@ -33,7 +33,7 @@
   },
   "engines": {
     "npm": ">=8.0.0",
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "eslintConfig": {
     "extends": [
