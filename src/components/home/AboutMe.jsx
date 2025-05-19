@@ -36,14 +36,13 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
   return (
     <Jumbotron id="aboutme" className="m-0">
       <div className="container row aboutme-swap flex-column flex-lg-row align-items-center">
-        <div className="col-12 col-lg-5 d-flex justify-content-center mb-4 mb-lg-0">
+        <div className="col-12 col-lg-5 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
           {showPic && (
             <img
-              className="border border-secondary rounded-circle aboutme-icon"
+              className="border border-secondary rounded-circle aboutme-icon img-fluid"
               src={profilePicUrl}
               alt="profilepicture"
-              width={imgSize}
-              height={imgSize}
+              style={{ maxWidth: 220, width: "100%", height: "auto" }}
             />
           )}
         </div>
