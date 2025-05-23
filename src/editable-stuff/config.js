@@ -112,7 +112,7 @@ const personalProjects = {
   data: [
     {
       title: 'ALU',
-      subtitle: '1st Place at MakeUofT',
+      subtitle: 'Single-Cycle RISC-V Processor',
       img: require('../assets/img/projects/ALU.png'),
       link: require('../assets/img/projects/ALU_Report.pdf'),
       repo: "https://github.com/sapnasuthar/ALU",
