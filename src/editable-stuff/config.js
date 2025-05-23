@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Sapna",
   middleName: "",
   lastName: "Suthar",
-  message: "Wired for innovation, grounded in precision.",
+  message: "Give me a problem, I’ll wire the solution.",
   icons: [
     {
       image: "fa-github",
