@@ -111,6 +111,14 @@ const personalProjects = {
   heading: "Personal Projects",
   data: [
     {
+      title: 'ALU',
+      subtitle: '1st Place at MakeUofT',
+      img: require('../assets/img/projects/ALU.png'),
+      link: require('../assets/img/projects/ALU_Report.pdf'),
+      repo: "https://github.com/sapnasuthar/ALU",
+      description: "Built a single-cycle RISC-V processor with a custom ALU to run basic instructions in one clock cycle.",
+    },
+    {
       title: 'RxID',
       subtitle: '1st Place at MakeUofT',
       img: require('../assets/img/projects/RxID.png'),
