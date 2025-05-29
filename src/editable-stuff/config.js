@@ -112,11 +112,11 @@ const personalProjects = {
   data: [
     {
       title: 'ALU',
-      subtitle: 'Single-Cycle RISC-V Processor',
+      subtitle: 'Custon Pipelined ALU',
       img: require('../assets/img/projects/ALU.png'),
       link: require('../assets/img/projects/ALU_Report.pdf'),
       repo: "https://github.com/sapnasuthar/ALU",
-      description: "Built a single-cycle RISC-V processor with a custom ALU to run basic instructions in one clock cycle.",
+      description: "Built a custom ALU that supports RISC-V instructions to run basic instructions.",
     },
     {
       title: 'RxID',
