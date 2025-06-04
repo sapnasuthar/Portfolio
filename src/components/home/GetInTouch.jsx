@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-console.log('EmailJS Public Key:', EMAILJS_PUBLIC_KEY); // Debug log
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
 
 const GetInTouch = ({ heading, message, email }) => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -12,7 +13,6 @@ const GetInTouch = ({ heading, message, email }) => {
 
   // Initialize EmailJS once when component mounts
   useEffect(() => {
-    console.log('Initializing EmailJS with key:', EMAILJS_PUBLIC_KEY); // Debug log
     if (!EMAILJS_PUBLIC_KEY) {
       console.error('EmailJS public key is missing!');
       return;
@@ -40,26 +40,31 @@ const GetInTouch = ({ heading, message, email }) => {
     setLoading(true);
     setStatus('');
     
-    if (!EMAILJS_PUBLIC_KEY) {
-      console.error('EmailJS public key is missing during form submission!');
+    // Debug logs to check environment variables and form ref before sending
+    console.log('Submitting form...');
+    console.log('Public Key:', EMAILJS_PUBLIC_KEY);
+    console.log('Service ID:', SERVICE_ID);
+    console.log('Template ID:', TEMPLATE_ID);
+    console.log('Form Ref Current:', formRef.current);
+
+    if (!EMAILJS_PUBLIC_KEY || !SERVICE_ID || !TEMPLATE_ID) {
+      console.error('EmailJS configuration is incomplete. Check public key, service ID, and template ID.');
       setStatus('Configuration error. Please contact the administrator.');
       setLoading(false);
       return;
     }
 
     emailjs.sendForm(
-      'service_wfmn97b',
-      'template_isd76mm',
+      SERVICE_ID,
+      TEMPLATE_ID,
       formRef.current,
-      {
-        publicKey: EMAILJS_PUBLIC_KEY,
-      }
+      EMAILJS_PUBLIC_KEY
     )
-      .then(() => {
+      .then((result) => {
+        console.log('EmailJS success:', result);
         setStatus('Message sent successfully!');
         setForm({ name: '', email: '', message: '' });
-      })
-      .catch((error) => {
+      }, (error) => {
         console.error('EmailJS error:', error);
         setStatus('Failed to send message. Please try again.');
       })
