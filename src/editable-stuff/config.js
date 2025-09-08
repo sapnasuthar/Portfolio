@@ -42,7 +42,7 @@ const about = {
   imageLink: require("../editable-stuff/sapnasuthar-2.png"),
   imageSize: 375,
   message:
-    "I'm Sapna Suthar. I'm a third-year Electrical Engineering student at McMaster University. I love building circuits, designing PCBs and working with embedded systems. I take pride in turning ideas into real products, whether it's a control board for an electric vehicle or a custom FPGA design. I balance hands-on detail work with big-picture system planning. I thrive in team settings and enjoy solving practical problems with creative, effective solutions.",
+    "I'm Sapna Suthar. I'm a third-year Computer Engineering student at McMaster University. I love building circuits, designing PCBs and working with embedded systems. I take pride in turning ideas into real products, whether it's a control board for an electric vehicle or a custom FPGA design. I balance hands-on detail work with big-picture system planning. I thrive in team settings and enjoy solving practical problems with creative, effective solutions.",
   resume: require('../assets/img/SapnaSutharResume.pdf'),
 };
 
