@@ -64,6 +64,14 @@ const schoolProjects = {
   heading: "School Projects",
   data: [
     {
+      title: 'FPGA Image Decompression Engine',
+      subtitle: 'Image Processing Pipeline',
+      img: require('../assets/img/projects/Image Decompression.png'), // CHANGE
+      // link: require('../assets/img/projects/2DX3Report.pdf'), // CHANGE
+      // repo: "https://github.com/sapnasuthar/LIDAR-Mapping",
+      description: "Designed a SystemVerilog FPGA image decompression pipline (lossless decoding, requantization, MAC-based IDCT, RGB conversion).",
+    },
+    {
       title: 'LIDAR Mapping',
       subtitle: 'Portable Indoor 3D Mapping System',
       img: require('../assets/img/projects/LIDAR_Photo.png'),
@@ -238,6 +246,22 @@ const experiences = {
       dates: 'September 2023 – Present',
       description: 'Designed and built the front controller PCB for an electric race car.',
       link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/Exo.jpeg'),
+      title: 'Low Voltage PCB Designer',
+      company: 'McMaster Exoskeleton ACE Team',
+      dates: 'September 2025 – Present',
+      description: 'Designed and built the low voltage PCB for an exoskeleton suit.',
+      // link: require('../assets/img/experiences/FE Report.pdf'), // Waiting for a design doc to put
+    },
+    {
+      picture: require('../assets/img/experiences/Nokia.jpg.avif'),
+      title: 'Software Engineering Test Intern',
+      company: 'Nokia',
+      dates: 'January 2026 – April 2026',
+      description: 'Developed and executed automated Linux-based regression test cases to validate new hardware and software features on Nokia\'s IP routing platforms.',
+      // link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
     },
     // Add more experiences here in the same format
   ]
