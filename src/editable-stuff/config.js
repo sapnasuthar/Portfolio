@@ -183,6 +183,7 @@ const skills = {
     { name: "Java", img: require("../assets/img/skills/Java.png") },
     { name: "Git", img: require("../assets/img/skills/Git.webp") },
     { name: "Bash", img: require("../assets/img/skills/Bash.svg.png") },
+    { name: "Linux", img: require("../assets/img/skills/Linux.png") },
   ],
   softSkills: [
     { name: "MATLAB", img: require("../assets/img/skills/MATLAB.png") },
@@ -253,7 +254,7 @@ const experiences = {
       company: 'McMaster Exoskeleton ACE Team',
       dates: 'September 2025 – Present',
       description: 'Designed and built the low voltage PCB for an exoskeleton suit.',
-      // link: require('../assets/img/experiences/FE Report.pdf'), // Waiting for a design doc to put
+      link: "https://www.macexo.com", // Waiting for a design doc to put
     },
     {
       picture: require('../assets/img/experiences/Nokia.jpg.avif'),
@@ -261,7 +262,7 @@ const experiences = {
       company: 'Nokia',
       dates: 'January 2026 – April 2026',
       description: 'Developed and executed automated Linux-based regression test cases to validate new hardware and software features on Nokia\'s IP routing platforms.',
-      // link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
+      link: "https://www.nokia.com", // Add a link to more info if available
     },
     // Add more experiences here in the same format
   ]
