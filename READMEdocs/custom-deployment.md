@@ -1,41 +1,113 @@
-## Setup And Custom-Deployment 🔧
+# Sapna Suthar | Portfolio
 
-1. To Get Started, Fork this repository to your GitHub account:
-2. Clone the forked repo from your account using:
+Personal portfolio website built with React and Bootstrap. It is based on the open-source developer portfolio template by hashirshoaeb (LGPL-3.0).
 
-   ```bash
-     git clone https://github.com/<your-username>/home.git
-   ```
+**Hosting:** this site is hosted on [Netlify](https://www.netlify.com/).
 
-3. Open in editor and edit [src/editable-stuff/configurations.json](./src/editable-stuff/configurations.json) file.
-4. Add your resume as <resume.pdf> in place of [src/editable-stuff/resume.pdf](./src/editable-stuff/)
-5. Edit [title](./public/index.html#L34) and meta [description](./public/index.html#L13) in [public/index.html](./public/index.html).
-6. Change URL in [package.json](./package.json) file:
+---
 
-   ```json
-     "homepage": "https://<your-username>.github.io"
-   ```
+## How to Edit the Site
 
-7. Now, create a new empty repository named \<your-username>.github.io and leave it there.
-8. Now you need to go to [pages.js](../pages.js#L3)
-   There you must change the 3rd line. As it the the url of your empty repository:
+Almost everything on the page is controlled by one file:
 
-   ```js
-   const repoURL =
-     "https://github.com/<your-username>/<your-username>.github.io.git";
-   ```
+```
+src/editable-stuff/config.js
+```
 
-9. To deploy website, run:
+Edit the text, save, and the local dev server reloads automatically.
 
-   ```bash
-    npm run build
-    npm run custom-deploy
-   ```
+### What to change in `config.js`
 
-10. Congrats your site is up and running. To see it live, visit:
+| Section (variable) | What it controls |
+| --- | --- |
+| `mainBody` | Name, tagline, and GitHub / LinkedIn icon links |
+| `about` | About Me text, profile picture, and resume PDF |
+| `repos` | Recent GitHub projects (pulled automatically from the GitHub API) |
+| `schoolProjects` | School project cards (title, subtitle, image, report link, repo, description) |
+| `personalProjects` | Personal / hackathon project cards |
+| `skills` | `hardSkills` (languages) and `softSkills` (tools), each with an icon |
+| `experiences` | Work, team, and leadership experience cards |
+| `getInTouch` | Closing message and contact prompt |
+| `leadership` | Optional section (currently hidden with `show: false`) |
 
-    ```https
-      https://<your-username>.github.io
-    ```
+Every section has a `show: true/false` switch to turn it on or off.
 
-Facing issues? Feel free to contact at hashirshoaeb@gmail.com.
+### Adding a project or experience
+
+Copy an existing entry in the matching `data: [ ... ]` list, paste it below, and edit the fields:
+
+```js
+{
+  title: 'Project Name',
+  subtitle: 'Short tagline',
+  img: require('../assets/img/projects/YourImage.png'),
+  link: 'https://link-to-report-or-demo',   // optional
+  repo: 'https://github.com/sapnasuthar/repo', // optional
+  description: 'One or two sentences about what you built.',
+},
+```
+
+Experiences use `picture`, `title`, `company`, `dates`, `description`, and `link`.
+
+### Images and files
+
+- Project images: `src/assets/img/projects/`
+- Skill icons: `src/assets/img/skills/`
+- Experience logos: `src/assets/img/experiences/`
+- Resume PDF: `src/assets/img/SapnaSutharResume.pdf` (replace the file, keep the name)
+- Profile picture: `src/editable-stuff/`
+
+Every `require('...')` in `config.js` must point to a file that exists, or the build will fail with `Module not found`. If you add a skill or experience, add its image first (or use a temporary placeholder with the right filename).
+
+### Other files worth knowing
+
+- `public/index.html`: page title and meta description
+- `public/social-image.png`: thumbnail shown when the link is shared
+
+---
+
+## Running Locally
+
+Requires Node 20 (see `.nvmrc`).
+
+```bash
+nvm use          # or: nvm install
+npm install
+npm start
+```
+
+Then open http://localhost:3000. The first compile can take a minute or two, so wait for `Compiled successfully!`.
+
+Do **not** run `npm audit fix --force` on this project. It can break `react-scripts`.
+
+---
+
+## Deployment (Netlify)
+
+The site is hosted on Netlify and deploys from the GitHub repository.
+
+- **Build command:** `npm run build`
+- **Publish directory:** `build`
+- **Node version:** 20 (matches `.nvmrc`)
+
+To update the live site, commit and push your changes to the connected branch:
+
+```bash
+git add .
+git commit -m "Update portfolio"
+git push
+```
+
+Netlify then rebuilds and publishes automatically. You can check build status and logs in the Netlify dashboard.
+
+Note: the original template deployed to GitHub Pages with `npm run deploy`. That step is not needed with Netlify.
+
+---
+
+## Tech Stack
+
+React, Bootstrap, Typist, GitHub API
+
+## License
+
+LGPL-3.0, inherited from the original template.
