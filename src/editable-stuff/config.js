@@ -54,7 +54,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "sapnasuthar", 
+  gitHubUsername: "sapnasuthar",
   reposLength: 4,
   specificRepos: [],
 };
@@ -65,19 +65,19 @@ const schoolProjects = {
   data: [
     {
       title: 'FPGA Image Decompression Engine',
-      subtitle: 'Image Processing Pipeline',
-      img: require('../assets/img/projects/Image Decompression.png'), // CHANGE
-      // link: require('../assets/img/projects/2DX3Report.pdf'), // CHANGE
-      // repo: "https://github.com/sapnasuthar/LIDAR-Mapping",
-      description: "Designed a SystemVerilog FPGA image decompression pipline (lossless decoding, requantization, MAC-based IDCT, RGB conversion).",
+      subtitle: 'Image Processing Pipeline | Sept – Dec 2025',
+      img: require('../assets/img/projects/Image Decompression.png'),
+      // link: require('../assets/img/projects/ImageDecompressionReport.pdf'), // TODO: add report when ready
+      // repo: "https://github.com/sapnasuthar/FPGA-Image-Decompression", // TODO: add repo link if public
+      description: "Designed a SystemVerilog FPGA pipeline for lossless decoding, requantization, IDCT, and RGB conversion using embedded RAM buffering. Built a MAC-based matrix engine for the IDCT, optimizing multiplier reuse to reach 88% clock-cycle utilization, and verified the RTL in ModelSim with testbenches and waveform analysis to debug FSM transitions, pipeline timing, and SRAM behaviour.",
     },
     {
-      title: 'LIDAR Mapping',
-      subtitle: 'Portable Indoor 3D Mapping System',
+      title: 'Spatial Mapping LiDAR System',
+      subtitle: 'Portable Indoor 3D Mapping | Jan – Apr 2025',
       img: require('../assets/img/projects/LIDAR_Photo.png'),
       link: require('../assets/img/projects/2DX3Report.pdf'),
       repo: "https://github.com/sapnasuthar/LIDAR-Mapping",
-      description: "Built a portable system that scans indoor spaces in 3D and renders the point‐cloud data in MATLAB.",
+      description: "Engineered a handheld LiDAR device for indoor 3D mapping and obstacle detection in confined environments. Developed C firmware for stepper motor scanning with I2C/UART communication, buffer management, polling-based state machines, and GPIO status indicators. Debugged hardware with oscilloscopes, multimeters, and UART logs, and wrote MATLAB scripts to render 3D point clouds from the sensor data.",
     },
     {
       title: 'DC Power Supply',
@@ -120,7 +120,7 @@ const personalProjects = {
   data: [
     {
       title: 'ALU',
-      subtitle: 'Custon Pipelined ALU',
+      subtitle: 'Custom Pipelined ALU',
       img: require('../assets/img/projects/ALU.png'),
       link: require('../assets/img/projects/ALU_Report.pdf'),
       repo: "https://github.com/sapnasuthar/ALU",
@@ -153,15 +153,15 @@ const leadership = {
   message:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    {
+      img: require("../editable-stuff/hashirshoaeb.png"),
+      label: "First slide label",
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
     },
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    {
+      img: require("../editable-stuff/hashirshoaeb.png"),
+      label: "Second slide label",
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
     },
   ],
   imageSize: {
@@ -171,27 +171,38 @@ const leadership = {
 };
 
 // SKILLS SECTION
+// NOTE: entries marked "TODO image" point to files that don't exist yet.
+// Add the image to ../assets/img/skills/ (or change the filename) before building.
 const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "C/C++", img: require("../assets/img/skills/C.png") },
+    { name: "C", img: require("../assets/img/skills/C.png") },
+    { name: "C++", img: require("../assets/img/skills/C.png") }, // TODO image: add Cpp.png
     { name: "Python", img: require("../assets/img/skills/Python.png") },
-    { name: "Verilog", img: require("../assets/img/skills/Verilog.png") },
-    { name: "SystemVerilog++", img: require("../assets/img/skills/SystemVerilog.png") },
-    { name: "VHDL", img: require("../assets/img/skills/VHDL.png") },
     { name: "Java", img: require("../assets/img/skills/Java.png") },
-    { name: "Git", img: require("../assets/img/skills/Git.webp") },
+    { name: "Ruby", img: require("../assets/img/skills/Ruby.svg.webp") }, // TODO image
+    { name: "Perl", img: require("../assets/img/skills/Perl.svg.webp") }, // TODO image
+    { name: "TCL", img: require("../assets/img/skills/TCL.png") }, // TODO image
+    { name: "Verilog", img: require("../assets/img/skills/Verilog.png") },
+    { name: "SystemVerilog", img: require("../assets/img/skills/SystemVerilog.png") },
+    { name: "VHDL", img: require("../assets/img/skills/VHDL.png") },
+    { name: "UVM", img: require("../assets/img/skills/UVM.jpg") }, // TODO image
+    { name: "ARM Assembly", img: require("../assets/img/skills/ARM.png") }, // TODO image
+    { name: "MATLAB", img: require("../assets/img/skills/MATLAB.png") },
     { name: "Bash", img: require("../assets/img/skills/Bash.svg.png") },
-    { name: "Linux", img: require("../assets/img/skills/Linux.png") },
   ],
   softSkills: [
-    { name: "MATLAB", img: require("../assets/img/skills/MATLAB.png") },
-    { name: "Quartus", img: require("../assets/img/skills/Quartus.png") },
-    { name: "Altium Designer", img: require("../assets/img/skills/Altium.png") },
-    { name: "Keil uVision", img: require("../assets/img/skills/Keil.jpeg") },
-    { name: "LTSpice", img: require("../assets/img/skills/LTSpice.png") },
+    { name: "Git", img: require("../assets/img/skills/Git.webp") },
+    { name: "Linux", img: require("../assets/img/skills/Linux.png") },
     { name: "VSCode", img: require("../assets/img/skills/VSCode.svg.png") },
+    { name: "Synopsys VCS", img: require("../assets/img/skills/synopsys.webp") }, // TODO image
+    { name: "Altera Quartus", img: require("../assets/img/skills/Quartus.png") },
+    { name: "ModelSim", img: require("../assets/img/skills/ModelSim.png") }, // TODO image
+    { name: "Altium Designer", img: require("../assets/img/skills/Altium.png") },
+    { name: "Cadence PSpice", img: require("../assets/img/skills/PSpice.png") }, // TODO image
+    { name: "LTSpice", img: require("../assets/img/skills/LTSpice.png") },
+    { name: "Keil uVision", img: require("../assets/img/skills/Keil.jpeg") },
   ],
 };
 
@@ -209,44 +220,20 @@ const experiences = {
   heading: 'Experiences',
   data: [
     {
-      picture: require('../assets/img/experiences/GWC.svg.png'),
-      title: 'Co-President',
-      company: 'GirlsWhoCode',
-      dates: 'September 2022 – June 2023',
-      description: 'Co-led the McMaster Girls Who Code Club, organizing workshops and a hackathon that engaged 30+ members, boosted coding confidence and inspired others to pursue STEM paths.',
-      link: require('../assets/img/experiences/GWC Report.pdf'), // Add a link to more info if available
+      picture: require('../assets/img/experiences/AMD.png'), // TODO image: add AMD logo
+      title: 'Design Verification Engineering Intern',
+      company: 'AMD',
+      dates: 'May 2026 – August 2027',
+      description: 'Validated multi-die chiplet designs with distributed simulations, debugged sanity failures, and automated benchmark reporting and performance profiling.',
+      link: "https://www.amd.com", // TODO: swap for more info if available
     },
     {
-      picture: require('../assets/img/experiences/WIE.png'),
-      title: 'Ambassador',
-      company: 'Women in Engineering',
-      dates: 'September 2023 – December 2023',
-      description: 'Visited high schools to showcase the Women in Engineering program, outline engineering career pathways, and share my personal journey to inspire future students.',
-      link: require('../assets/img/experiences/WIE Certificate.png'), // Add a link to more info if available
-    },
-    {
-      picture: require('../assets/img/experiences/Scotia.png'),
-      title: 'Unlock Your Future - Women in Technology Program Fellow',
-      company: 'Scotiabank',
-      dates: 'January 2024 – April 2024',
-      description: 'Completed Scotiabank\'s Unlock Your Future program, gaining mentorship and career clarity.',
-      link: require('../assets/img/experiences/Scotiabank Report.pdf'), // Add a link to more info if available
-    },
-    {
-      picture: require('../assets/img/experiences/DayTrading.jpg'),
-      title: 'Day Trader',
-      company: 'Self-Employed',
-      dates: 'July 2024 – August 2024',
-      description: 'Grew portfolio by 50% through disciplined day trading strategies.',
-      link: require('../assets/img/experiences/Trading Report.pdf'), // Add a link to more info if available
-    },
-    {
-      picture: require('../assets/img/experiences/FE.png'),
-      title: 'Front Controller PCB Designer',
-      company: 'McMaster Formula SAE Team',
-      dates: 'September 2023 – Present',
-      description: 'Designed and built the front controller PCB for an electric race car.',
-      link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
+      picture: require('../assets/img/experiences/Nokia.jpg.avif'),
+      title: 'Software Engineering Test Intern',
+      company: 'Nokia',
+      dates: 'January 2026 – April 2026',
+      description: 'Developed and executed automated Linux-based regression test cases to validate new hardware and software features on Nokia\'s IP routing platforms.',
+      link: "https://www.nokia.com", // Add a link to more info if available
     },
     {
       picture: require('../assets/img/experiences/Exo.jpeg'),
@@ -257,12 +244,44 @@ const experiences = {
       link: "https://www.macexo.com", // Waiting for a design doc to put
     },
     {
-      picture: require('../assets/img/experiences/Nokia.jpg.avif'),
-      title: 'Software Engineering Test Intern',
-      company: 'Nokia',
-      dates: 'January 2026 – April 2026',
-      description: 'Developed and executed automated Linux-based regression test cases to validate new hardware and software features on Nokia\'s IP routing platforms.',
-      link: "https://www.nokia.com", // Add a link to more info if available
+      picture: require('../assets/img/experiences/FE.png'),
+      title: 'Electrical Systems Team Member',
+      company: 'McMaster Formula Electric',
+      dates: 'September 2023 – Present',
+      description: 'Designed and built the front controller PCB for an electric race car.',
+      link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/DayTrading.jpg'),
+      title: 'Day Trader',
+      company: 'Self-Employed',
+      dates: 'July 2024 – August 2024',
+      description: 'Grew portfolio by 50% through disciplined day trading strategies.',
+      link: require('../assets/img/experiences/Trading Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/Scotia.png'),
+      title: 'Unlock Your Future - Women in Technology Program Fellow',
+      company: 'Scotiabank',
+      dates: 'January 2024 – April 2024',
+      description: 'Completed Scotiabank\'s Unlock Your Future program, gaining mentorship and career clarity.',
+      link: require('../assets/img/experiences/Scotiabank Report.pdf'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/WIE.png'),
+      title: 'Ambassador',
+      company: 'Women in Engineering',
+      dates: 'September 2023 – December 2023',
+      description: 'Visited high schools to showcase the Women in Engineering program, outline engineering career pathways, and share my personal journey to inspire future students.',
+      link: require('../assets/img/experiences/WIE Certificate.png'), // Add a link to more info if available
+    },
+    {
+      picture: require('../assets/img/experiences/GWC.svg.png'),
+      title: 'Co-President',
+      company: 'GirlsWhoCode',
+      dates: 'September 2022 – June 2023',
+      description: 'Co-led the McMaster Girls Who Code Club, organizing workshops and a hackathon that engaged 30+ members, boosted coding confidence and inspired others to pursue STEM paths.',
+      link: require('../assets/img/experiences/GWC Report.pdf'), // Add a link to more info if available
     },
     // Add more experiences here in the same format
   ]
