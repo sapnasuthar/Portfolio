@@ -214,6 +214,7 @@ const getInTouch = {
     "I'm currently seeking internships in ASIC design, verification, and embedded systems. If you know of any opportunities, have questions, or just want to say hi, please feel free to reach out!"
 };
 
+// EXPERIENCES SECTION (professional work only)
 const experiences = {
   show: true,
   id: 'experience',
@@ -236,6 +237,24 @@ const experiences = {
       link: "https://www.nokia.com", // Add a link to more info if available
     },
     {
+      picture: require('../assets/img/experiences/DayTrading.jpg'),
+      title: 'Day Trader',
+      company: 'Self-Employed',
+      dates: 'July 2024 – August 2024',
+      description: 'Grew portfolio by 50% through disciplined day trading strategies.',
+      link: require('../assets/img/experiences/Trading Report.pdf'), // Add a link to more info if available
+    },
+    // Add more experiences here in the same format
+  ]
+};
+
+// EXTRACURRICULARS SECTION (teams, clubs, programs)
+const extracurriculars = {
+  show: true,
+  id: 'extracurriculars',
+  heading: 'Extracurriculars',
+  data: [
+    {
       picture: require('../assets/img/experiences/Exo.jpeg'),
       title: 'Low Voltage PCB Designer',
       company: 'McMaster Exoskeleton ACE Team',
@@ -250,14 +269,6 @@ const experiences = {
       dates: 'September 2023 – Present',
       description: 'Designed and built the front controller PCB for an electric race car.',
       link: require('../assets/img/experiences/FE Report.pdf'), // Add a link to more info if available
-    },
-    {
-      picture: require('../assets/img/experiences/DayTrading.jpg'),
-      title: 'Day Trader',
-      company: 'Self-Employed',
-      dates: 'July 2024 – August 2024',
-      description: 'Grew portfolio by 50% through disciplined day trading strategies.',
-      link: require('../assets/img/experiences/Trading Report.pdf'), // Add a link to more info if available
     },
     {
       picture: require('../assets/img/experiences/Scotia.png'),
@@ -283,7 +294,7 @@ const experiences = {
       description: 'Co-led the McMaster Girls Who Code Club, organizing workshops and a hackathon that engaged 30+ members, boosted coding confidence and inspired others to pursue STEM paths.',
       link: require('../assets/img/experiences/GWC Report.pdf'), // Add a link to more info if available
     },
-    // Add more experiences here in the same format
+    // Add more extracurriculars here in the same format
   ]
 };
 
@@ -292,4 +303,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, schoolProjects, personalProjects, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, schoolProjects, personalProjects, skills, leadership, getInTouch, experiences, extracurriculars };
