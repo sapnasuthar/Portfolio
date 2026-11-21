@@ -264,7 +264,7 @@ const extracurriculars = {
     },
     {
       picture: require('../assets/img/experiences/FE.png'),
-      title: 'Electrical Systems Team Member',
+      title: 'Low Voltage Electronics Engineer',
       company: 'McMaster Formula Electric',
       dates: 'September 2023 – Present',
       description: 'Designed and built the front controller PCB for an electric race car.',
